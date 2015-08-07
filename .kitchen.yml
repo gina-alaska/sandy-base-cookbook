@@ -1,0 +1,19 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: chef/centos-6.5
+
+suites:
+  - name: default
+    run_list:
+      - recipe[sandy-base::default]
+    attributes:
+      sandy:
+        ssh:
+          allowed_networks:
+            '10.0.0.0/8': true
