@@ -17,7 +17,7 @@ describe 'sandy-base::ssh' do
     it 'opens ssh ports' do
       expect(chef_run).to create_iptables_ng_rule('22-ssh-enable-gina-rcs-hosts').with(
         ip_version: 4,
-        rule: '-m state --state NEW -p tcp -s 137.229.19.0/24,10.19.16.0/24,10.0.19.0/24,199.165.80/21 --dport 22 -j ACCEPT')
+        rule: '-m state --state NEW -p tcp -s 137.229.19.0/24,10.19.16.0/24,10.0.19.0/24,199.165.80/21,10.50.0.0/16 --dport 22 -j ACCEPT')
     end
 
     it 'includes ssh_known_hosts::default' do
