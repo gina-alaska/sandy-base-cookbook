@@ -1,6 +1,10 @@
 include_recipe 'users::default'
 
-users_manage 'sysadmins' do
+group 'sysadmins' do
+  action :remove
+end
+
+users_manage 'sysadmin' do
   group_id 2300
   action [:remove, :create]
 end

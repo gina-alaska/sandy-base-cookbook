@@ -18,9 +18,13 @@ describe 'sandy-base::users' do
       expect(chef_run).to include_recipe("users::default")
     end
 
+    it 'deletes the sysadmins group' do
+      expect(chef_run).to remove_group('sysadmins')
+    end
+
     it 'manages the sysadmin group' do
-      expect(chef_run).to remove_users_manage('sysadmins')
-      expect(chef_run).to create_users_manage('sysadmins')
+      expect(chef_run).to remove_users_manage('sysadmin')
+      expect(chef_run).to create_users_manage('sysadmin')
     end
 
     it 'includes sudo::default' do
