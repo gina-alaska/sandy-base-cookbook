@@ -12,5 +12,5 @@ cookbook 'iptables-ng'
 cookbook 'openssh'
 cookbook 'ssh_known_hosts'
 cookbook 'users'
-
+cookbook 'bash-cve-2014-7169', path: '/Users/scott/workspace/cookbooks/bash-cve-2014-7169'
 metadata
