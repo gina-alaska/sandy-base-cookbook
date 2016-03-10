@@ -6,3 +6,6 @@ group :test do
   gem 'guard-rspec'
   gem 'guard-rubocop'
 end
+
+gem 'kitchen-inspec'
+gem 'kitchen-docker'
