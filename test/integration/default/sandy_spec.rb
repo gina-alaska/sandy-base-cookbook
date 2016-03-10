@@ -11,7 +11,5 @@ describe sshd_config do
 end
 
 describe command('getenforce') do
-  its('stdout') { should match(%r{Permissive}) }
+  its('stdout') { should match(/Permissive/) }
 end
-
-

@@ -1,4 +1,4 @@
-#specify the default configs for openssh
+# Specify the default configs for openssh
 default['openssh']['client']['forward_agent'] = 'yes'
 default['openssh']['client']['forward_x11'] = 'no'
 default['openssh']['client']['forward_x11_trusted'] = 'no'
