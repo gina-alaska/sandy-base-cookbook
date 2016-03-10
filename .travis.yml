@@ -23,9 +23,7 @@ env:
     - RUBYOPT="-W0"
   matrix:
     - CHEF_VERSION=12.1.2 PLATFORM=centos-6
-    - CHEF_VERSION=12.1.2 PLATFORM=centos-7
     - CHEF_VERSION=latest PLATFORM=centos-6
-    - CHEF_VERSION=latest PLATFORM=centos-7
 
 matrix:
   fast_finish: true
