@@ -1,0 +1,24 @@
+---
+driver:
+  name: docker
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-6.7
+
+verifier:
+  name: inspec
+
+suites:
+  - name: default
+    run_list:
+      - recipe[sandy-base::default]
+    attributes:
+      omnibus_updater:
+        kill_chef_on_upgrade: false
+      sandy:
+        ssh:
+          allowed_networks:
+            '10.0.0.0/8': true
